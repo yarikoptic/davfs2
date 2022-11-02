@@ -1,5 +1,9 @@
 ChangeLog for davfs2
 --------------------
+2022-10-02 Ali Abdallah (ali.abdallah@suse.com)
+    * Release version 1.7.0
+      Port to FreeBSD.
+      Fix cached file not up to date attributes.
 
 2021-10-31 Werner Baumann (werner.baumann@onlinehome.de)
     * Release version 1.6.1
