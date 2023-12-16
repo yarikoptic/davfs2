@@ -170,8 +170,8 @@ int
 dav_head(const char *path, char **etag, time_t *mtime, off_t *length);
 
 
-/* Locks the file path on the server with an excluse write lock and updates
-   expire and exists. If a lock for path allready exists it will be refreshed.
+/* Locks the file path on the server with an exclusive write lock and updates
+   expire and exists. If a lock for path already exists it will be refreshed.
    On success expire will be updated to the time when the lock expires.
    If the file does not yet exist and server creates a new file (as opposed to
    creating a locked-null-resource) exists will be set to 1.

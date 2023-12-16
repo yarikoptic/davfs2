@@ -656,7 +656,7 @@ ChangeLog for davfs2
       Added missing licenses.
 
 2009-04-04 Werner Baumann (werner.baumann@onlinehome.de)
-    * cahe.c, dav_lookup:
+    * cache.c, dav_lookup:
       If node not found update directory with file_refresh.
 
 2009-03-29 Werner Baumann (werner.baumann@onlinehome.de)

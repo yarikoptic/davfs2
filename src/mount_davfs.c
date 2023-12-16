@@ -435,7 +435,7 @@ change_persona(dav_args *args)
      permissions; if not it tries to create it and/or set owner and permissions
    - when invoked by non-root user: checks for configuration directory in the
      users homepage and creates missing directories and files
-   - checks wether args->cache_dir is accessible. */
+   - checks whether args->cache_dir is accessible. */
 static void
 check_dirs(dav_args *args)
 {
@@ -819,7 +819,7 @@ check_permissions(dav_args *args)
 }
 
 
-/* Checks wether the file system is mounted.
+/* Checks whether the file system is mounted.
    It uses information from the private global variables mounts (mtab-file),
    url (must be device in the mtab entry) and mpoint (mount point).
    return value : 0 - no matching entry in the mtab-file (not mounted)
@@ -1960,7 +1960,7 @@ log_dbg_config(dav_args *args)
    is ignored.
    Parameters containing one of the characters ' ' (space), '\t' (tab), '\',
    '"' or '#' must be enclosed in double quotes '"' *or* this character has to
-   be escaped by preceeding a '\'-character.
+   be escaped by preceding a '\'-character.
    Inside double quotes the '"'-character must be escaped. '\' may be escaped;
    it must be escaped if there is more than on '\'-character in succession.
    Whitespace characters other than ' ' and tab must only occur at the end of
@@ -2503,7 +2503,7 @@ read_secrets(dav_args *args, const char *filename)
    in square brackets.
    The pointers to the components may be NULL. If they point to a non-NULL
    string, it is freed and then replaced by a newly allocated string.
-   If no scheme is foud the default sheme "http" is returned.
+   If no scheme is foud the default scheme "http" is returned.
    If no path is found "/" is returned as path. path will always end with "/".
    There is *no* default value returned for port.
    return value : 0 on success, -1 otherwise. */

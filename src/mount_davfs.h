@@ -126,7 +126,7 @@ typedef struct {
    Step 2:
    - The modules for connecting to the kernel, connecting to the WebDAV resource
      and for caching are initialised.
-   If an error accurs during step 1 or step 2 an error message is printed and
+   If an error occurs during step 1 or step 2 an error message is printed and
    the program dies immediately. Clean up is left to the operating system.
    Step 3:
    - Forking into daemon mode.
@@ -145,7 +145,7 @@ typedef struct {
    - The daemon has set a signal handler for SIGTERM and SIGHUP. If it gets one
      of these signals it tries to unmount the file system and resets the global
      variable keep_on_running. This will terminate the message loop gracefully.
-   - If the file system is unmounted (by the umount programm), the message
+   - If the file system is unmounted (by the umount program), the message
      loop will terminate gracefully.
    - The close functions of the modules are called, that will clean up the
      cache, save cached information if necessary and close the connections. */

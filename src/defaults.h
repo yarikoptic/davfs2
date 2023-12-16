@@ -1,4 +1,4 @@
-/*  defauls.h: default values of configuration options and constants.
+/*  defaults.h: default values of configuration options and constants.
     Copyright (C) 2006, 2007, 2008, 2009, 2014 Werner Baumann
 
     This file is part of davfs2.

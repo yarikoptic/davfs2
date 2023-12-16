@@ -1628,7 +1628,7 @@ add_node(dav_node *parent, dav_props *props)
 }
 
 
-/* Checks whether node is allready in the list of changed nodes. If not
+/* Checks whether node is already in the list of changed nodes. If not
    it will be appended at the end of the list. */
 static void
 add_to_changed(dav_node *node)
@@ -1783,7 +1783,7 @@ delete_node(dav_node *node)
 /* Deletes the tree starting at and including node. The tree is freed
    uncontionally, no checks for lost update problem and the like are
    done, also backup will be deleted if in tree.
-   Exeption: the root node will not be deleted. */
+   Exception: the root node will not be deleted. */
 static void
 delete_tree(dav_node *node)
 {
@@ -3475,7 +3475,7 @@ xml_end_string_old(void *userdata, int state, const char *nspace,
 
 
 /* Will be called when the start tag of a XML-element is found, and tests
-   wheather it is a BACKUP element. In this case parent must be ROOT.
+   whether it is a BACKUP element. In this case parent must be ROOT.
    userdata will be set to the newly created node backup and also the global
    variable backup will be set.
    return value : 0 not responsible for this kind of element.
