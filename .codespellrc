@@ -1,0 +1,6 @@
+[codespell]
+skip = .git,*.pdf,*.svg,go.sum,.codespellrc,po,*.po,*.pot
+check-hidden = true
+# ignore lines with German
+ignore-regex = .*ü.*
+ignore-words-list = childs,parm
