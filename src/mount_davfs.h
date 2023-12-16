@@ -121,7 +121,7 @@ typedef struct {
    - Checking this information for consistency and any errors that would
      prevent successful running of the daemon.
    - Checking whether the the user has permissions to mount.
-   - Checking whether the neccessary files and directories for running the
+   - Checking whether the necessary files and directories for running the
      daemon are available.
    Step 2:
    - The modules for connecting to the kernel, connecting to the WebDAV resource
@@ -148,7 +148,7 @@ typedef struct {
    - If the file system is unmounted (by the umount programm), the message
      loop will terminate gracefully.
    - The close functions of the modules are called, that will clean up the
-     cache, save cached information if neccessary and close the connections. */
+     cache, save cached information if necessary and close the connections. */
 int
 main(int argc, char *argv[]);
 

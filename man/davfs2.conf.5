@@ -116,7 +116,7 @@ Default: 16
 .TP
 .B use_proxy
 Whether to use a proxy to connect to the WebDAV server. 0 = no, 1 = yes.
-If no proxy is defined in the configration file or the environment variables
+If no proxy is defined in the configuration file or the environment variables
 \fBhttps_proxy\fR, \fBhttp_proxy\fR and \fBall_proxy\fR, this option has no
 effect. 
 .br
@@ -189,7 +189,7 @@ and not by a top level CA then the TLS-specification requires the client
 to send the complete chain of certificates (without the top
 level CA-certificate). davfs2 only sends the client certificate. To work
 around this bug the server must store and trust the complete chain of
-CA-certificates down to the one CA that isssued the client certificate.
+CA-certificates down to the one CA that issued the client certificate.
 
 .TP
 .B secrets
@@ -251,7 +251,7 @@ Default: 0
 .TP
 .B if_match_bug
 Some servers do not handle If-Match and If-None-Match-headers correctly.
-This otion tells \fB@PROGRAM_NAME@\fR to use HEAD instead of thes headers.
+This option tells \fB@PROGRAM_NAME@\fR to use HEAD instead of thes headers.
 0 = no, 1 = yes.
 .br
 Default: 0
@@ -521,7 +521,7 @@ Default: 0
 Send debug messages to the syslog daemon. The value tells what kind of
 information shall be logged. The messages are send with facility LOG_DAEMON
 and priority LOG_DEBUG. It depends from the configuration of the syslog daemon
-where the messages will go (propably /var/log/messages, /var/log/syslog or
+where the messages will go (probably /var/log/messages, /var/log/syslog or
 /var/log/daemon.log). Whether HTTP related debug messages are available
 depends on your neon library.
 .br

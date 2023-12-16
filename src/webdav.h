@@ -38,8 +38,8 @@ struct dav_props {
     off_t size;         /* File size in bytes (regular files only). */
     time_t mtime;       /* Date of last modification. */
     int is_dir;         /* Boolean; 1 if a directory. */
-    int is_exec;        /* -1 if not specified; 1 is executeable;
-                           0 not executeable. */
+    int is_exec;        /* -1 if not specified; 1 is executable;
+                           0 not executable. */
     dav_props *next;    /* Next in the list. */
 };
 
@@ -52,7 +52,7 @@ struct dav_props {
    If the server does not support class 2, locking is disabled.
    It must only be initialized once, as it depends on global variables.
    If an error occurs, the program is terminated.
-   paramters: if not self explaining, please see mount_davfs.h, struct args. */
+   parameters: if not self explaining, please see mount_davfs.h, struct args. */
 void
 dav_init_webdav(const dav_args* args);
 
@@ -62,7 +62,7 @@ dav_init_webdav(const dav_args* args);
    does not support locks, it will remove the lockstore and set locks
    to NULL.
    path : Path to the root collection.
-   return value : 0 on success or an apropriate error code. */
+   return value : 0 on success or an appropriate error code. */
 int
 dav_init_connection(const char *path);
 
@@ -112,7 +112,7 @@ dav_delete_props(dav_props *props);
 
 /* Retrieves properties for the directory named by path and its
    direct childs (depth 1) from the server.
-   The properties are returned as a linked list of dav_props. If successfull,
+   The properties are returned as a linked list of dav_props. If successful,
    this list contains at least one entry (the directory itself; its name is
    the empty string). The calling function is responsible for freeing the list
    and all the strings included.
@@ -150,9 +150,9 @@ dav_get_file(const char *path, const char *cache_path, off_t *size,
 
 
 /* Returns the error string from the last WebDAV request.
-   Note: This will not be usefull in any case, because the last function
+   Note: This will not be useful in any case, because the last function
          called may have done more then one request (e.g. an additional
-         lock discover. But it is usefull for dav_get_collection(). */
+         lock discover. But it is useful for dav_get_collection(). */
 const char *
 dav_get_webdav_error(void);
 
@@ -181,7 +181,7 @@ dav_head(const char *path, char **etag, time_t *mtime, off_t *length);
    If it can't get a lock it will return an appropriate error code and set
    expire to 0.
    If the session is initialized with the nolocks option, it does nothing,
-   but allways returns success and sets expire to 0.
+   but always returns success and sets expire to 0.
    path    : absolute path of the file on the server.
    expire  : Points to the time when the lock expires. 0 if not locked.
              Will be updated.
@@ -262,7 +262,7 @@ dav_set_no_terminal(void);
 
 /* Releases the lock on file path on the serverand sets expire to 0.
    path : Absolute path of the file on the server.
-   return value : 0 if no error occured; an appropriate file error code
+   return value : 0 if no error occurred; an appropriate file error code
                   otherwise. */
 int
 dav_unlock(const char *path, time_t *expire);

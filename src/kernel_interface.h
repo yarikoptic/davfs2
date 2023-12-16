@@ -1,4 +1,4 @@
-/*  kernel_interface.h: interface to fuse and coda kernel mocule.
+/*  kernel_interface.h: interface to fuse and coda kernel module.
     Copyright (C) 2006, 2007, 2008, 2009, 2020 Werner Baumann
 
     This file is part of davfs2.

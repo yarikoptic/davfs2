@@ -1684,7 +1684,7 @@ backup_node(dav_node *orig)
      If it can not be safed, a local backup is created and the node is deleted. 
    - removes any file nodes without cached file
    - removes all dir nodes that have not at least one file node below.
-   Short: removes everthing that is not necessary to correctly reference
+   Short: removes everything that is not necessary to correctly reference
    the cached files.
    Node node itself will be removed and deleted if possible.
    Directory backup and root will never be removed.
@@ -2007,7 +2007,7 @@ move_reg(dav_node *src, dav_node *dst, dav_node *dst_parent,
    into the child list of parent and the hash table. Member nref of the
    parent will be updated.
    parent : The parent of the new node, may be NULL.
-   mode   : Tthe mode of the new node.
+   mode   : The mode of the new node.
    return value : A pointer to the new node. */
 static dav_node *
 new_node(dav_node *parent, mode_t mode)
@@ -2121,7 +2121,7 @@ remove_from_tree(dav_node *node)
    Depending on the kind of node and its state additional action will be taken:
    - For directories the complete tree below is removed too.
    - If a regular file is dirty, open for writing or created, a backup in
-     driectory backup will be created, that holds the cached local copy of the
+     directory backup will be created, that holds the cached local copy of the
      file.
    - If a file is open, it will not be removed from the hash table to allow
      proper closing of open file descriptors. */
@@ -2423,7 +2423,7 @@ get_file_handle(dav_node * node, int fd, int accmode, pid_t pid, pid_t pgid)
 /* Checks whether user uid has access to node according to how.
    In any case the user must have execute permission for the parent of node
    and all of its parents up to the root node.
-   int how : How to acces the node. May be any combination of R_OK, W_OK, X_OK
+   int how : How to access the node. May be any combination of R_OK, W_OK, X_OK
              and F_OK.
    return value: 1 access is allowed.
                  0 access is denied. */
@@ -2751,7 +2751,7 @@ write_dir(dav_node *dir, int fd)
    message and terminate the program.
    dir    : The top level cache directory.
    host   : Domain name of the server.
-   path   : Path of the resource onthe server.
+   path   : Path of the resource on the server.
    mpoint : Mount point. */
 static void
 check_cache_dir(const char *dir, const char *host, const char *path,
@@ -3138,7 +3138,7 @@ xml_cdata(void *userdata, int state, const char *cdata, size_t len)
 
 /* Finishes the creation of directory backup.
    userdata is set to the parent of backup.
-   return value : allways 0. */
+   return value : always 0. */
 static int
 xml_end_backup(void *userdata, int state, const char *nspace, const char *name)
 {
@@ -3251,9 +3251,9 @@ xml_end_decimal(void *userdata, int state, const char *nspace,
 
 
 /* Finishes the creation of a directory. Members name and path of the
-   not must not be NULL, or the direcotry tree will be deleted.
+   not must not be NULL, or the directory tree will be deleted.
    userdata is set to the parent of the directory.
-   return value : allways 0. */
+   return value : always 0. */
 static int
 xml_end_dir(void *userdata, int state, const char *nspace, const char *name)
 {
@@ -3305,7 +3305,7 @@ xml_end_mode(void *userdata, int state, const char *nspace, const char *name)
    will be deleted.
    If the file is in directory backup, member path may be NULL.
    userdata is set to the parent of the file node.
-   return value : allways 0. */
+   return value : always 0. */
 static int
 xml_end_reg(void *userdata, int state, const char *nspace, const char *name)
 {
@@ -3347,7 +3347,7 @@ xml_end_reg(void *userdata, int state, const char *nspace, const char *name)
 /* Finishes the creation of the root directory. userdata must be equal to root,
    or the complete tree will be deleted.
    Members path, name, cache_path and etag will be NULL.
-   return value : allways 0. */
+   return value : always 0. */
 static int
 xml_end_root(void *userdata, int state, const char *nspace, const char *name)
 {
@@ -3475,7 +3475,7 @@ xml_end_string_old(void *userdata, int state, const char *nspace,
 
 
 /* Will be called when the start tag of a XML-element is found, and tests
-   wheather it is a BACKUP elemt. In this case parent must be ROOT.
+   wheather it is a BACKUP element. In this case parent must be ROOT.
    userdata will be set to the newly created node backup and also the global
    variable backup will be set.
    return value : 0 not responsible for this kind of element.

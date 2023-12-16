@@ -40,7 +40,7 @@
    ordinary user. */
 #define DAV_USER_MOPTS (MS_MGC_VAL | MS_NOSUID | MS_NOEXEC | MS_NODEV)
 
-/* This mount options will allways be set by davfs2. Different values from
+/* This mount options will always be set by davfs2. Different values from
    command line and even fstab will be silently ignored. */
 #define DAV_MOPTS (MS_MGC_VAL | MS_NOSUID | MS_NODEV)
 
@@ -176,7 +176,7 @@
 #define DAV_N_COOKIES 0
 
 /* Check on server whether a file exists or has been modified before
-   locking a new file or changing an existant one.
+   locking a new file or changing an existent one.
    May be overridden by system config file and user config file. */
 #define DAV_PRECHECK 1
 
@@ -203,7 +203,7 @@
 
 /* Timeout in seconds used when libneon supports non blocking io
    A value of zero means use the TCP default
-   May be overriden by system config file and user config file. */
+   May be overridden by system config file and user config file. */
 #define DAV_CONNECT_TIMEOUT 10
 
 /* Timeout in seconds used when reading from a socket.

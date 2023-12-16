@@ -91,7 +91,7 @@ static int debug;
 /* Private function prototypes */
 /*=============================*/
 
-/* Functions to handle upcalls fromthe kernel module. */
+/* Functions to handle upcalls from the kernel module. */
 
 static uint32_t
 fuse_access(void);
@@ -422,7 +422,7 @@ dav_fuse_loop(int device, char *mpoint, size_t bufsize, time_t idle_time,
 /* Private functions */
 /*===================*/
 
-/* Functions to handle upcalls fromthe kernel module.
+/* Functions to handle upcalls from the kernel module.
    The cache module only uses data types from the C-library. For file access,
    mode and the like it only uses symbolic constants defined in the C-library.
    So the main porpose of this functions is to translate from kernel specific

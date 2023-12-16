@@ -428,7 +428,7 @@ change_persona(dav_args *args)
 }
 
 
-/* Checks for the existence of necessary and usefull directories and files.
+/* Checks for the existence of necessary and useful directories and files.
    - checks whether it can use the proc file system for information about
      mounted file systems, or has to use mtab
    - whether the directory to save pid files exists and has correct owner and
@@ -815,7 +815,7 @@ check_permissions(dav_args *args)
     }
     if (args->debug & DAV_DBG_CONFIG)
         syslog(LOG_MAKEPRI(LOG_DAEMON, LOG_DEBUG),
-               "memeber of group %s", args->dav_group);
+               "member of group %s", args->dav_group);
 }
 
 
@@ -894,7 +894,7 @@ is_mounted(void)
    it prints an error message and calls exit(EXIT_FAILURE).
    argc    : the number of arguments.
    argv[]  : array of argument strings.
-   return value : args, containig the parsed options and arguments. The args
+   return value : args, containing the parsed options and arguments. The args
                   structure and all strings are newly allocated. The calling
                   function is responsible to free them. */
 static dav_args *
@@ -1154,7 +1154,7 @@ parse_config(dav_args *args)
 }
 
 
-/* Reads the secrets file and asks the user interactivly for credentials if
+/* Reads the secrets file and asks the user interactively for credentials if
    necessary. The user secrets file is parsed after the system wide secrets
    file, so it will have precedence. */
 static void
@@ -1970,7 +1970,7 @@ log_dbg_config(dav_args *args)
              parameters are found
    parmv[] : the parameters found are returned in this array. It contains
              pointers into the rearranged line parameter.
-   reurn value : the numer of parameters or -1 if an error occurs. */
+   return value : the number of parameters or -1 if an error occurs. */
 static int
 parse_line(char *line, int parmc, char *parmv[])
 {
