@@ -1178,7 +1178,7 @@ parse_secrets(dav_args *args)
         if (args->password)
             free(args->password);
         args->password = NULL;
-        args->password = user_input(_("Password: "));
+        args->password = dav_user_input_hidden(_("Password: "));
     }
 
     if (args->askauth && args->useproxy && !args->p_user) {
