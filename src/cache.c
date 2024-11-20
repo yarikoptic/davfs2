@@ -1022,7 +1022,7 @@ dav_lookup(dav_node **nodep, dav_node *parent, const char *name, uid_t uid)
 
         if (is_open(*nodep))
             attr_from_cache_file(*nodep);
-        else if (!is_dirty(*nodep)) {
+        else if (!is_dirty(*nodep) && !is_backup(*nodep)) {
             int ret;
 
             dav_props *props = NULL;
