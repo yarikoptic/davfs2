@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: davfs2 1.5.0\n"
-"POT-Creation-Date: 2020-08-06 17:59+0200\n"
+"POT-Creation-Date: 2021-10-24 10:51+0200\n"
 "PO-Revision-Date: 2020-08-06 17:59+0200\n"
 "Last-Translator: Werner Baumann <werner.baumann@onlinehome.de>\n"
 "Language-Team: \n"
@@ -205,8 +205,8 @@ msgstr ""
 "Wenn ein Wert eines der Sonderzeichen Leerzeichen, Tabulator, #, \\(rs oder "
 "\" enthält, muss diesem Zeichen ein Escape-Zeichen \\(rs vorangestellt "
 "werden. Also \\(cq\\(rs\\ \\(cq statt \\(cq\\ \\(cq, \\(cq\\(rs#\\(cq statt "
-"\\(cq#\\(cq, \\(cq\\(rs\\(rs\\(cq statt \\(cq\\(rs\\(cq und \\(cq\\(rs"
-"\"\\(cq statt \\(cq\"\\(cq."
+"\\(cq#\\(cq, \\(cq\\(rs\\(rs\\(cq statt \\(cq\\(rs\\(cq und "
+"\\(cq\\(rs\"\\(cq statt \\(cq\"\\(cq."
 
 # type: Plain text
 #. type: Plain text
@@ -1617,7 +1617,7 @@ msgstr "Beinhaltet config, kernel, cache und http."
 
 # type: SH
 #. type: SH
-#: davfs2.conf.5:575 mount.davfs.8:551 umount.davfs.8:79
+#: davfs2.conf.5:575 mount.davfs.8:548 umount.davfs.8:79
 #, no-wrap
 msgid "AUTHORS"
 msgstr "AUTOREN"
@@ -1634,20 +1634,20 @@ msgstr ""
 
 # type: SH
 #. type: SH
-#: davfs2.conf.5:581 mount.davfs.8:568 umount.davfs.8:84
+#: davfs2.conf.5:581 mount.davfs.8:565 umount.davfs.8:84
 #, no-wrap
 msgid "DAVFS2 HOME"
 msgstr "DAVFS2 HOME"
 
 # type: TH
 #. type: Plain text
-#: davfs2.conf.5:584 mount.davfs.8:571 umount.davfs.8:87
+#: davfs2.conf.5:584 mount.davfs.8:568 umount.davfs.8:87
 msgid "@PACKAGE_BUGREPORT@"
 msgstr "@PACKAGE_BUGREPORT@"
 
 # type: SH
 #. type: SH
-#: davfs2.conf.5:586 mount.davfs.8:573 umount.davfs.8:89
+#: davfs2.conf.5:586 mount.davfs.8:570 umount.davfs.8:89
 #, no-wrap
 msgid "SEE ALSO"
 msgstr "SIEHE AUCH"

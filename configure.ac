@@ -2,7 +2,8 @@
 # Process this file with autoconf to produce a configure script.
 
 # Copyright (C) 2006, 2007, 2008, 2009, 2010, 2014, 2019 Werner Baumann
-#
+# Copyright (C) 2024, Ali Abdallah
+# 
 # This file is part of davfs2.
 #
 # davfs2 is free software; you can redistribute it and/or modify
@@ -21,7 +22,7 @@
 
 
 AC_PREREQ(2.69)
-AC_INIT(davfs2, 1.7.0, http://savannah.nongnu.org/projects/davfs2)
+AC_INIT(davfs2, 1.7.1, https://github.com/alisarctl/davfs2)
 AC_CONFIG_SRCDIR([src/cache.c])
 AC_CONFIG_AUX_DIR([config])
 AM_INIT_AUTOMAKE([foreign])

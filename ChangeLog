@@ -1,5 +1,11 @@
 ChangeLog for davfs2
 --------------------
+2024-11-20 Ali Abdallah (ali.abdallah@suse.com)
+    * Release bugfix version 1.7.1
+      Hide password prompt when -o username=myname is specified
+      Fix segfault on prop query on backup node
+      Fix autoload fuse module.
+
 2022-10-02 Ali Abdallah (ali.abdallah@suse.com)
     * Release version 1.7.0
       Port to FreeBSD.
