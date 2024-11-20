@@ -1,53 +1,26 @@
-2020-08-06
-----------
+# 1 INTRODUCTION
 
-# Copyright (C) 2006, 2007, 2008, 2009, 2010, 2014, 2016, 2019,2020 Werner Baumann
-
-# Copying and distribution of this file, with or without modification, are
-# permitted in any medium without royalty.
-
-
-DAVFS2 1.6.0 README
-===================
-
-    1 INTRODUCTION
-        1.1 WHAT DAVFS2 IS INTENDED FOR
-        1.2 WHAT DAVFS2 IS NOT INTENDED FOR
-    2 SECURITY CONSIDERATIONS
-    3 MOUNTING
-    4 TLS / SSL
-    5 CACHE
-    6 TROUBLE SHOOTING
-    7 KNOWN ISSUES
-    8 CONTACT
-    
-
-1 INTRODUCTION
-==============
-
-davfs2 is a Linux file system driver that allows you to mount a WebDAV
-resource into your Unix file system tree. So - and that is what makes
-davfs2 different - applications can use it without knowing about WebDAV.
-You may edit WebDAV resources using standard applications that interact
-with the file system as usual.
+davfs2 is a Linux and FreeBSD file system in userspace (FUSE) driver that
+allows you to mount a WebDAV resource into your Unix file system tree. So - and
+that is what makes davfs2 different - applications can use it without knowing
+about WebDAV.  You may edit WebDAV resources using standard applications that
+interact with the file system as usual.
 
 davfs2 supports SSL and proxy, HTTP authentication (basic and digest)
 and client certificates.
 
-1.1 WHAT DAVFS2 IS INTENDED FOR
--------------------------------
+## 1.1 WHAT DAVFS2 IS INTENDED FOR
 
 - If you have documents you want to access from different locations, store
   them on a WebDAV server accessible via Internet. Mount them with davfs2
   from wherever you want.
-  
+
 - Use a WebDAV server as workspace for a geographically distributed work group.
 
 - A web site may be made accessible to the developers via WebDAV. So they
   can mount with davfs2 and edit in place.
 
-1.2 WHAT DAVFS2 IS NOT INTENDED FOR
------------------------------------
+## 1.2 WHAT DAVFS2 IS NOT INTENDED FOR
 
 davfs2 is not intended as a replacement for distributed file systems like
 nfs, coda, cifs and similar.
@@ -73,10 +46,8 @@ davfs2 can't (always) replace lodal disk space. Due to the nature of WebDAV
 davfs2 can't directly redirect reading and writing to the WebDAV server. davfs2
 always needs local copies of all open files. So if you have not enough sidk
 space to hold these local copies, davfs2 will not help.
- 
 
-2 SECURITY CONSIDERATIONS
-=========================
+# 2 SECURITY CONSIDERATIONS
 
 To allow non-root users mounting of WebDAV resources, mount.davfs is run
 setuid root. To prevent inexperienced (or even malicious) users from introducing
@@ -95,8 +66,7 @@ mounting it changes its id permanently to that of the mounting user. When
 the mounting user is root, the mount.davfs daemon will run as user 'davfs2'.
 
 
-3 MOUNTING
-==========
+# 3 MOUNTING
 
 davfs2 comes with three manuals: mount.davfs, umount.davfs and davfs2.conf.
 
@@ -124,8 +94,7 @@ works depends on the details of the start-up and shut-down process and will
 be different on different systems. So please test before you rely on this.
 
 
-4 TLS / SSL
-===========
+# 4 TLS / SSL
 
 The key question when using TLS/SSL is whether you can trust in the certificate
 the server presents. There is no gain in security when you use strong
@@ -163,8 +132,7 @@ the certificate and ask the user. This will only be done before mount.davfs
 changes into daemon mode.
 
 
-5 CACHE
-=======
+# 5 CACHE
 
 davfs2 will store a local copy of all open files in its cache. So make sure
 there is enough local disk space available in the cache directory.
@@ -197,8 +165,7 @@ there are many files to be uploaded (e.g. after copying a directory)
 mount.davfs may block quite some time, as it has to upload all the files.
 
 
-6 TROUBLESHOOTING
-=================
+# 6 TROUBLESHOOTING
 
 In case davfs2 does not behave as you expect, there is some very useful free
 software, to search for the reason:
@@ -234,23 +201,10 @@ When sending a bug report, please include
 - if possible, output from the above mentioned tools.
 
 
-7 KNOWN ISSUES
-==============
+# 7 KNOWN ISSUES
 
 - If the server does not support RFC 4331 (most servers don't), davfs2 cannot
   calculate the free disk space on the server. But some applications
   (e.g. nautilus) insist on this. So davfs can't help but lie. I tried to
   make the numbers look funny, so you will notice they are faked.
-
-
-8 CONTACT
-=========
-
-davfs2 is an Free Software project hostet at
-http://savannah.nongnu.org/projects/davfs2 or
-https://savannah.nongnu.org/projects/davfs2
-
-You can submit a bug-report or support-request at
-http://savannah.nongnu.org/support/?func=additem&group=davfs2 or
-https://savannah.nongnu.org/support/?func=additem&group=davfs2
 
