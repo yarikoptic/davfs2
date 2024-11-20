@@ -23,5 +23,5 @@ EXTRA_DIST = bootstrap BUGS FAQ README.translators \
              config/COPYING.davfs2 config/INSTALL.davfs2
 SUBDIRS = po etc man src
 ACLOCAL_AMFLAGS = -I config
-doc_DATA = AUTHORS BUGS ChangeLog COPYING FAQ INSTALL NEWS README \
+doc_DATA = AUTHORS BUGS ChangeLog COPYING FAQ INSTALL NEWS README.md \
            README.translators THANKS TODO
