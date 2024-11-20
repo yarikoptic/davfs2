@@ -24,7 +24,7 @@ AC_PREREQ(2.69)
 AC_INIT(davfs2, 1.7.0, http://savannah.nongnu.org/projects/davfs2)
 AC_CONFIG_SRCDIR([src/cache.c])
 AC_CONFIG_AUX_DIR([config])
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([foreign])
 
 AC_CONFIG_HEADER([config.h])
 
