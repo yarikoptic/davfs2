@@ -158,9 +158,12 @@ dav_init_kernel_interface(int *dev, size_t *buf_size, const char *url,
     *dev = open(path, O_RDWR | O_NONBLOCK);
 
     if (*dev <= 0) {
-        ERR(_("loading kernel module fuse"));
         int ret;
-        pid_t pid = fork();
+        pid_t pid;
+
+        printf(_("loading kernel module fuse"));
+
+        pid = fork();
         if (pid == 0) {
 #if defined(__FreeBSD__)
             execl("/sbin/kldload", "kldload", "fusefs", NULL);
