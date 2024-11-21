@@ -24,7 +24,7 @@
 # AC_PATH_PROG to find 'neon-config'.
 # If found, it sets variable NEON_CONFIG and calls NEON_USE_EXTERNAL.
 # if not found, or if NEON_USE_EXTERNAL does not set neon_got_library
-# to yes, configration is stopped with an error message.
+# to yes, configuration is stopped with an error message.
 
 AC_DEFUN([DAV_CHECK_NEON],[
 
@@ -66,7 +66,7 @@ AC_DEFUN([DAV_CHECK_NEON],[
 ])
 
 
-# Setting uid and gid, mount.davfs will run as, and some pathes.
+# Setting uid and gid, mount.davfs will run as, and some paths.
 
 AC_DEFUN([DAV_DEFAULTS],[
 
@@ -151,7 +151,7 @@ AC_DEFUN([DAV_ICONV],[
 
     if test "$dav_iconv" = "yes"; then
         AC_DEFINE([DAV_USE_ICONV], [1],
-          [Define to enable charcter conversion])
+          [Define to enable character conversion])
     fi
 
 ])

@@ -428,14 +428,14 @@ change_persona(dav_args *args)
 }
 
 
-/* Checks for the existence of necessary and usefull directories and files.
+/* Checks for the existence of necessary and useful directories and files.
    - checks whether it can use the proc file system for information about
      mounted file systems, or has to use mtab
    - whether the directory to save pid files exists and has correct owner and
      permissions; if not it tries to create it and/or set owner and permissions
    - when invoked by non-root user: checks for configuration directory in the
      users homepage and creates missing directories and files
-   - checks wether args->cache_dir is accessible. */
+   - checks whether args->cache_dir is accessible. */
 static void
 check_dirs(dav_args *args)
 {
@@ -815,11 +815,11 @@ check_permissions(dav_args *args)
     }
     if (args->debug & DAV_DBG_CONFIG)
         syslog(LOG_MAKEPRI(LOG_DAEMON, LOG_DEBUG),
-               "memeber of group %s", args->dav_group);
+               "member of group %s", args->dav_group);
 }
 
 
-/* Checks wether the file system is mounted.
+/* Checks whether the file system is mounted.
    It uses information from the private global variables mounts (mtab-file),
    url (must be device in the mtab entry) and mpoint (mount point).
    return value : 0 - no matching entry in the mtab-file (not mounted)
@@ -894,7 +894,7 @@ is_mounted(void)
    it prints an error message and calls exit(EXIT_FAILURE).
    argc    : the number of arguments.
    argv[]  : array of argument strings.
-   return value : args, containig the parsed options and arguments. The args
+   return value : args, containing the parsed options and arguments. The args
                   structure and all strings are newly allocated. The calling
                   function is responsible to free them. */
 static dav_args *
@@ -1154,7 +1154,7 @@ parse_config(dav_args *args)
 }
 
 
-/* Reads the secrets file and asks the user interactivly for credentials if
+/* Reads the secrets file and asks the user interactively for credentials if
    necessary. The user secrets file is parsed after the system wide secrets
    file, so it will have precedence. */
 static void
@@ -1960,7 +1960,7 @@ log_dbg_config(dav_args *args)
    is ignored.
    Parameters containing one of the characters ' ' (space), '\t' (tab), '\',
    '"' or '#' must be enclosed in double quotes '"' *or* this character has to
-   be escaped by preceeding a '\'-character.
+   be escaped by preceding a '\'-character.
    Inside double quotes the '"'-character must be escaped. '\' may be escaped;
    it must be escaped if there is more than on '\'-character in succession.
    Whitespace characters other than ' ' and tab must only occur at the end of
@@ -1970,7 +1970,7 @@ log_dbg_config(dav_args *args)
              parameters are found
    parmv[] : the parameters found are returned in this array. It contains
              pointers into the rearranged line parameter.
-   reurn value : the numer of parameters or -1 if an error occurs. */
+   return value : the number of parameters or -1 if an error occurs. */
 static int
 parse_line(char *line, int parmc, char *parmv[])
 {
@@ -2503,7 +2503,7 @@ read_secrets(dav_args *args, const char *filename)
    in square brackets.
    The pointers to the components may be NULL. If they point to a non-NULL
    string, it is freed and then replaced by a newly allocated string.
-   If no scheme is foud the default sheme "http" is returned.
+   If no scheme is foud the default scheme "http" is returned.
    If no path is found "/" is returned as path. path will always end with "/".
    There is *no* default value returned for port.
    return value : 0 on success, -1 otherwise. */

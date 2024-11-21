@@ -185,7 +185,7 @@ Default: ordinary users are not allowed to mount.
 .TP
 .B users
 Like \fBuser\fR, but \fBany\fR user is allowed to unmount the file system,
-not only the mounting user. This is generally not recomended.
+not only the mounting user. This is generally not recommended.
 If the \fBuser\fR option allows an unprivileged user to mount, but unmounting by
 the mounting user fails the \fBusers\fR may be a work around.
 .br
@@ -330,7 +330,7 @@ even happen without intention).
 \fB@PROGRAM_NAME@\fR will therefore check if the file has been changed on the
 the server before it uploads a new version. If it
 finds it impossible to upload the locally changed file, it will store it in
-the local backup direcotry \fIlost+found\fP. You should check this directory from
+the local backup directory \fIlost+found\fP. You should check this directory from
 time to time and decide what to do with this files.
 
 .PP
@@ -354,7 +354,7 @@ properly \fB@PROGRAM_NAME@\fR may not be able to access this files. You can use
 \fB@PACKAGE@\fR implements Unix permissions for access control. But
 changing owner and permissions of a file is only \fBlocal\fR. It is 
 intended as a means for the owner of the file system, to control whether
-other local users may acces this file system.
+other local users may access this file system.
 
 .PP
 The server does not know about this. From the servers point of view there is
@@ -369,8 +369,8 @@ on the local system is still controlled by mount options and local permissions.
 
 .PP
 When the file system is unmounted, attributes of cached files (including
-owner and permissions) are stored in cache, as well as the attributs of
-the direcotries they are in. But there is no information stored about
+owner and permissions) are stored in cache, as well as the attributes of
+the directories they are in. But there is no information stored about
 directories that do not contain cached files.
 
 

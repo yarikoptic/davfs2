@@ -182,7 +182,7 @@ main(int argc, char *argv[])
         WARN(_("\n"
                "  can't find %s-process with pid %s;\n"
                "  trying to unmount anyway.\n"
-               "  you propably have to remove %s manually"),
+               "  you probably have to remove %s manually"),
              PROGRAM_NAME, pid, pidfile);
         return system(umount_command);
     }

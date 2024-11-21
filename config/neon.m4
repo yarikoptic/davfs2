@@ -46,7 +46,7 @@
 #   ])
 #
 # Alternatively, for a simple standalone app with neon as a
-# dependancy, use just:
+# dependency, use just:
 #
 #   NEON_LIBRARY
 # 
@@ -341,7 +341,7 @@ AC_SUBST(NEON_BUILD_BUNDLED)
 dnl AC_SEARCH_LIBS done differently. Usage:
 dnl   NE_SEARCH_LIBS(function, libnames, [extralibs], [actions-if-not-found],
 dnl                            [actions-if-found])
-dnl Tries to find 'function' by linking againt `-lLIB $NEON_LIBS' for each
+dnl Tries to find 'function' by linking against `-lLIB $NEON_LIBS' for each
 dnl LIB in libnames.  If link fails and 'extralibs' is given, will also
 dnl try linking against `-lLIB extralibs $NEON_LIBS`.
 dnl Once link succeeds, `-lLIB [extralibs]` is prepended to $NEON_LIBS, and
@@ -644,7 +644,7 @@ else
 #include <netdb.h>])
    AC_CHECK_TYPE(in_addr_t,,[
      AC_DEFINE([in_addr_t], [unsigned int], 
-                            [Define if in_addr_t is not availale])], [
+                            [Define if in_addr_t is not available])], [
 #ifdef HAVE_SYS_TYPES_H
 # include <sys/types.h>
 #endif

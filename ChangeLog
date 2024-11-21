@@ -44,7 +44,7 @@ ChangeLog for davfs2
 
 2020-06-06 Werner Baumann (werner.baumann@onlinehome.de)
     * webdav.c, add_header:
-      Use ";" instead of "," as seperator (bug #58459).
+      Use ";" instead of "," as separator (bug #58459).
 
 2020-06-06 Werner Baumann (werner.baumann@onlinehome.de)
     * mount_davfs.c, log_dbg_config:
@@ -247,7 +247,7 @@ ChangeLog for davfs2
 
 2014-04-05 Werner Baumann (werner.baumann@onlinehome.de)
     * umount_davfs.c:
-      Allways try 'umount -i'.
+      Always try 'umount -i'.
 
 2014-04-05 Werner Baumann (werner.baumann@onlinehome.de)
     * configure.ac, src/Makefile.am, defaults.h,
@@ -343,7 +343,7 @@ ChangeLog for davfs2
 
 2012-11-01 Werner Baumann (werner.baumann@onlinehome.de)
     * man/Makefile.am, man/de/Makefile.am, man/es/Makefile.am:
-      Honour configrue parameter --manfile (sr #108173)
+      Honour configure parameter --manfile (sr #108173)
 
 2012-08-20 Werner Baumann (werner.baumann@onlinehome.de)
     * src/Makefile.am:
@@ -511,7 +511,7 @@ ChangeLog for davfs2
 
 2009-06-12 Werner Baumann (werner.baumann@onlinehome.de)
     * cache.c, set_next_upload_attempt:
-      Max. retry intervall for files must not exceed max_retry.
+      Max. retry interval for files must not exceed max_retry.
     * Add configuration option max_upload_attempts.
 
 2009-06-08 Werner Baumann (werner.baumann@onlinehome.de)
@@ -656,7 +656,7 @@ ChangeLog for davfs2
       Added missing licenses.
 
 2009-04-04 Werner Baumann (werner.baumann@onlinehome.de)
-    * cahe.c, dav_lookup:
+    * cache.c, dav_lookup:
       If node not found update directory with file_refresh.
 
 2009-03-29 Werner Baumann (werner.baumann@onlinehome.de)
@@ -758,7 +758,7 @@ ChangeLog for davfs2
 2008-05-30 Werner Baumann (werner.baumann@onlinehome.de)
     * cache.c, parse_index:
       Finish parsing, before checking for parse error
-      (ne_xml_parse seems not allways to report
+      (ne_xml_parse seems not always to report
        errors otherwise)
     * cache.c, write_node:
       Put path, name, cache_path, etag and mime_type

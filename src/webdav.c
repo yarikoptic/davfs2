@@ -94,7 +94,7 @@ typedef struct {
 } propfind_context;
 
 typedef struct {
-    int error;                  /* An error occured while reading/writing. */
+    int error;                  /* An error occurred while reading/writing. */
     const char *file;           /* cache_file to store the data in. */
     int fd;                     /* file descriptor of the open cache file. */
 } get_context;
@@ -1476,7 +1476,7 @@ get_ne_error(const char *method, ne_session *sess)
 
 
 /* Searches for a lock for resource at path and returns
-   this lock if successfull, NULL otherwise. */
+   this lock if successful, NULL otherwise. */
 static struct ne_lock *
 lock_by_path(const char *path)
 {
@@ -1574,9 +1574,9 @@ log_writer(void *cookie, const char *buffer, size_t size)
 
 
 /* Checks etag for weakness indicator and quotation marks.
-   The reurn value is either a strong etag with quotation marks or NULL.
+   The return value is either a strong etag with quotation marks or NULL.
    Depending on global variable drop_weak_etags weak etags are either
-   dropped or convertet into strong ones. */
+   dropped or converted into strong ones. */
 static char *
 normalize_etag(const char *etag)
 {
@@ -1664,7 +1664,7 @@ add_header(ne_request *req, void *userdata, ne_buffer *header)
    returned, so neon will not try again.
    userdata : What the credentials are needed for ("server" or "proxy").
    realm    : Used for error log.
-   attempt  : Number of attempts to get credentials. If not 0 an error occured.
+   attempt  : Number of attempts to get credentials. If not 0 an error occurred.
    user     : A buffer of size NE_ABUFSIZ to return the username.
    pwd      : A buffer of size NE_ABUFSIZ to return the password.
    return value : value if attempt. neon will not call this function again if
@@ -1731,7 +1731,7 @@ file_reader(void *userdata, const char *block, size_t length)
 
 
 /* A ne_post_header_fn to read cookies from the Set-Cookie header and
-   store them in the global arrray of strings cookie_list. The cookies
+   store them in the global array of strings cookie_list. The cookies
    will be send in the Cookie header of subsequent requests.
    Only the "name=value" part of the cookie is stored. All attributes
    are completely ignored.
